@@ -63,16 +63,16 @@ build_gui_exe.bat
 构建完成后得到带版本号的单文件程序（版本号取自 `pyproject.toml` 的 `project.version`）：
 
 ```text
-dist\isproxy-gui-0.1.0.exe
+dist\isproxy-gui-<version>.exe
 ```
 
 双击即可运行，不需要安装 Python 或项目依赖。
 
-也可以直接执行构建命令（把 `0.1.0` 换成当前版本号）：
+也可以直接执行构建命令（把 `<version>` 换成当前版本号）：
 
 ```bash
 uv run --with "pyinstaller>=6.22" pyinstaller --noconfirm --clean --onefile --windowed \
-  --name isproxy-gui-0.1.0 --paths src \
+  --name isproxy-gui-<version> --paths src \
   --specpath build --workpath build --distpath dist \
   launcher_gui.py
 ```
@@ -178,3 +178,7 @@ Windows 下旧版本代理可能与新实例同时监听同一个端口，导致
 ```bash
 uv run python -m unittest discover -s tests -v
 ```
+
+## 许可证
+
+本项目基于 [MIT License](LICENSE) 发布。

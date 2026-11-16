@@ -3,6 +3,8 @@ name = "isproxy"
 version = "1.0.0"
 description = "A tiny stdlib-only reverse proxy for mapping 127.0.0.1:<port> to a target site"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     { name = "IronSword", email = "3232217212@qq.com" }
 ]
